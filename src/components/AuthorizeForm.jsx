@@ -101,7 +101,7 @@ function AuthorizeForm() {
                             <input className="shadow appearance-none border rounded  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="date" name="to" value={form.to} onChange={handleChange} />
                         </div>
                     </div>
-                    <div className="flex justify-end">
+                    <div className="flex justify-center">
                         <button className="border-2 border-blue-500 bg-blue-400 text-white  font-bold py-2  px-4 rounded">Generate</button>
                     </div>
                 </form>

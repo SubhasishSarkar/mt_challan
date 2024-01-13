@@ -7,11 +7,15 @@ function Layout() {
     const [collapsed, setCollapsed] = useState(false);
     const isMobileDevice = isMobile(useDeviceDetector());
     return (
-        <div className={`grid min-h-screen transition-[grid-template-columns] duration-300 ease-in-out ${collapsed ? (isMobileDevice ? "grid-cols-sidebar-collapsed-mobile" : "grid-cols-sidebar-collapsed-desktop") : "grid-cols-sidebar"}`}>
+        <div
+            className={`grid min-h-screen transition-[grid-template-columns] duration-300 ease-in-out ${
+                collapsed ? (isMobileDevice ? "grid-cols-sidebar-collapsed-mobile" : "grid-cols-sidebar-collapsed-desktop") : isMobileDevice ? "grid-cols-sidebar-mobile" : "grid-cols-sidebar-desktop"
+            }`}
+        >
             <Sidebar collapsed={collapsed} setCollapsed={setCollapsed} />
 
             {/* <Header /> */}
-            <div className="m-2 rounded-md bg-white overflow-auto">
+            <div className="m-2 rounded-md bg-white overflow-auto h-[100vh] p-4">
                 <Outlet />
             </div>
 
