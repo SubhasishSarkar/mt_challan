@@ -16,12 +16,11 @@ code {
     monospace;
 } */
 
-input {
-  border-bottom: 2px #000;
-  border-style: dotted;
-  
+.rungta-challan input {
+    border-bottom: 2px #000;
+    border-style: dotted;
 }
 
-input:focus {
-  outline: none;
+.rungta-challan input:focus {
+    outline: none;
 }
